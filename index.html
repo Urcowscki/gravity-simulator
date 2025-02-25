@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emulador de Gravidade</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="sistemaSolar">
+      <div id="sol"></div>
+      <div id="mercurio"></div>
+      <div id="venus"></div>
+      <div id="terra"></div>
+      <div id="marte"></div>
+      <div id="jupiter"></div>
+      <div id="saturno"></div>
+      <div id="urano"></div>
+      <div id="netuno"></div>
+    </div>
+    <div id="controles">
+      <label for="planetas">Selecione um Planeta:</label>
+      <select id="planetas">
+        <option value="mercurio">Mercúrio</option>
+        <option value="venus">Vênus</option>
+        <option value="terra">Terra</option>
+        <option value="marte">Marte</option>
+        <option value="jupiter">Júpiter</option>
+        <option value="saturno">Saturno</option>
+        <option value="urano">Urano</option>
+        <option value="netuno">Netuno</option>
+      </select>
+
+      <label for="massaObjeto">Peso do Objeto:</label>
+      <input type="number" id="massaObj" />
+
+      <button id="emularButton">Emular Queda</button>
+      <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

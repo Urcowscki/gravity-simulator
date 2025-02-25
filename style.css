@@ -1,0 +1,202 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  background-image: url('outerspace1.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  color: antiquewhite;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#sistemaSolar {
+  position: relative;
+  width: 800px;
+  height: 800px;
+}
+
+#sol {
+  width: 150px;
+  height: 150px;
+  background-color: #ffcc00;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(255, 204, 0, 0.8);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+
+#mercurio,
+#venus,
+#terra,
+#marte,
+#jupiter,
+#saturno,
+#urano,
+#netuno {
+  position: absolute;
+  border-radius: 50%;
+}
+
+#mercurio {
+  background: linear-gradient(to top, #b4b4b4, #6f6f6f, #b4b4b4, white);
+  width: 10px;
+  height: 10px;
+  animation: orbitMercury 10s linear infinite;
+}
+
+#venus {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(to top, #f0e68c, #e1c16f, white);
+  animation: orbitVenus 10s linear infinite;
+}
+
+#terra {
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(
+    to top,
+    #1e90ff,
+    rgb(13, 170, 96),
+    #1e90ff,
+    white
+  );
+  animation: orbitEarth 30s linear infinite;
+}
+
+#marte {
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(to top, #d14d33, #e57442, #d14d33, white);
+  animation: orbitMars 40s linear infinite;
+}
+
+#jupiter {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to top, #d2b097, #ad8f72, #d2b097, white);
+  animation: orbitJupiter 50s linear infinite;
+}
+
+#saturno {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(to top, #f4e1b3, #e1c46c, #f4e1b3, white);
+  animation: orbitSaturn 60s linear infinite;
+}
+
+#saturno::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: 3px solid #b5b5b5;
+  z-index: -1;
+}
+
+#urano {
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(to top, #8bc6e2, #61a6b3, #8bc6e2, white);
+  animation: orbitNeptune 70s linear infinite;
+}
+
+#netuno {
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(to top, #4f9bb3, 2c6b888, #4f9bb3, white);
+  animation: orbitNeptune 80s linear infinite;
+}
+
+@keyframes orbitMercury {
+  0% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
+  }
+}
+
+@keyframes orbitVenus {
+  0% {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+@keyframes orbitEarth {
+  0% {
+    transform: rotate(0deg) translateX(200px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(200px) rotate(-360deg);
+  }
+}
+
+@keyframes orbitMars {
+  0% {
+    transform: rotate(0deg) translateX(250px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(250px) rotate(-360deg);
+  }
+}
+
+@keyframes orbitJupiter {
+  0% {
+    transform: rotate(0deg) translateX(300px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(300px) rotate(-360deg);
+  }
+}
+
+@keyframes orbitSaturn {
+  0% {
+    transform: rotate(0deg) translatex(350px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(350px) rotate(-360deg);
+  }
+}
+
+@keyframes orbitUranus {
+  0% {
+    transform: rotate(0deg) translatex(400px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(400px) rotate(-360deg);
+  }
+}
+
+@keyframes orbitNeptune {
+  0% {
+    transform: rotate(0deg) translateX(450px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(450px) rotate(-360deg);
+  }
+}
+
+.fallingObject {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
